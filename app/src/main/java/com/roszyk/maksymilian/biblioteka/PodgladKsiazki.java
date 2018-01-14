@@ -3,20 +3,15 @@ package com.roszyk.maksymilian.biblioteka;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ListView;
 
 import com.roszyk.maksymilian.biblioteka.Model.Ksiazka;
 
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by Kavvson on 14 sty 2018.
@@ -81,10 +76,9 @@ public class PodgladKsiazki extends AppCompatActivity {
         gatunek.setText(k.getGatunek());
 
         // jak nie ma opisu to jest null, nie ma potrzeby wyswietlania
-        if(String.valueOf(k.getOpis()) != "null"){
+        if (String.valueOf(k.getOpis()) != "null") {
             opis.setText(String.valueOf(k.getOpis()));
         }
-
 
 
         // Ustaw zaznaczenie z bazy

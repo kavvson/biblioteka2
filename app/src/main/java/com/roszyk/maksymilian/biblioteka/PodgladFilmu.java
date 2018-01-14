@@ -11,7 +11,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 import com.roszyk.maksymilian.biblioteka.Model.Film;
-import com.roszyk.maksymilian.biblioteka.Model.Ksiazka;
 
 /**
  * Created by Kavvson on 14 sty 2018.
@@ -83,7 +82,7 @@ public class PodgladFilmu extends AppCompatActivity {
         gatunek.setText(k.getGatunek());
 
         // jak nie ma opisu to jest null, nie ma potrzeby wyswietlania
-        if(String.valueOf(k.getOpis()) != "null"){
+        if (String.valueOf(k.getOpis()) != "null") {
             opis.setText(String.valueOf(k.getOpis()));
         }
 

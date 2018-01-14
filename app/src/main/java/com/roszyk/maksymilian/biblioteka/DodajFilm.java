@@ -98,18 +98,7 @@ public class DodajFilm extends AppCompatActivity {
         });
 
         Bazadanych = new DBHandler(this);
-        //
-        //  buttonActivity4.setOnClickListener(new index.StartNewActivity4());
 
-        //Button buttonActivity5 = (Button)findViewById(R.id.dodajk);
-        // buttonActivity5.setOnClickListener(new index.StartNewActivity5());
-
-        // mListViewFilm = (ListView) findViewById(R.id.filmList);
-        //  mListViewBook = (ListView) findViewById(R.id.bookList);
-        //  mDatabaseHelper = new databasehelper(this);
-
-        //populateListViewFilm();
-        // populateListViewBook();
     }
 
 

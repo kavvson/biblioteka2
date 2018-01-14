@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "DatabaseHelper";
 
     /*
         Tworzenie widoku
@@ -18,11 +17,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button do_programu = (Button) findViewById(R.id.do_programu); // przycisk
-        // do odkomentowanie jak dodajesz nowa tabele
-        //   getBaseContext().deleteDatabase("people_table");
 
 
-        do_programu.setOnClickListener(new PrzejdzDoProgramu());
+        do_programu.setOnClickListener(new PrzejdzDoProgramu()); // przejdz do programu
 
 
     }

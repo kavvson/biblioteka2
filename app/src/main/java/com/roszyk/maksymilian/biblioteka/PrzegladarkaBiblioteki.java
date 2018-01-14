@@ -53,8 +53,8 @@ public class PrzegladarkaBiblioteki extends AppCompatActivity {
         ksiazki_label.setText("Łącznie książek " + String.valueOf(Bazadanych.liczbaKsiazek(idBiblioteki))); // zmiana naglowka na nazwe biblioteki
 
 
-        ListViewKsiazki = (ListView) findViewById(R.id.bookList); // TODO: zmiana nazwy
-        ListViewFilmy = (ListView) findViewById(R.id.filmList);// TODO: zmiana nazwy
+        ListViewKsiazki = (ListView) findViewById(R.id.bookList);
+        ListViewFilmy = (ListView) findViewById(R.id.filmList);
 
         listaKsiazek(); // uzupelnia liste ksiazkami
         listaFilmow(); // uzupelnia liste filmow
@@ -85,7 +85,7 @@ public class PrzegladarkaBiblioteki extends AppCompatActivity {
             if (czyObejrzany == 1) {
                 obejrzany = " - Obejrzany";
             }
-            listafilmow.add(data.getString(2) + " - " + data.getString(1) + " "+obejrzany); // dodaj do listy ksiazek format autor - tytul
+            listafilmow.add(data.getString(2) + " - " + data.getString(1) + " " + obejrzany); // dodaj do listy ksiazek format autor - tytul
 
             // tworzyny mape -pozycja,film- pierwsza wartosc to pozycja w liscie ListView, a druga wartosc to id filmu
             // inaczej nie da sie pozyskac id filmu poniewaz elementy w liscie maja swoje numery
@@ -109,11 +109,11 @@ public class PrzegladarkaBiblioteki extends AppCompatActivity {
                 int id = mapaFilmow.get(i) != null ? mapaFilmow.get(i) : -1; // jak nie ma id naszej ksiazki w liscie zwracamy -1, nie odnaleziono
 
                 Log.i("LISTA FILMOW", nazwaBiblioteki + " Wcisnieto pozycje film :: id :: " + String.valueOf(id) + " w bibliotece :: id :: " + idBiblioteki);
-                if(id > -1){
+                if (id > -1) {
                     Intent podgladFilmu = new Intent(PrzegladarkaBiblioteki.this, PodgladFilmu.class);
-                    podgladFilmu.putExtra("id",id);
-                    podgladFilmu.putExtra("idBiblioteki",idBiblioteki);
-                    podgladFilmu.putExtra("nazwa",nazwaBiblioteki);
+                    podgladFilmu.putExtra("id", id);
+                    podgladFilmu.putExtra("idBiblioteki", idBiblioteki);
+                    podgladFilmu.putExtra("nazwa", nazwaBiblioteki);
                     startActivity(podgladFilmu);
                 }
             }
@@ -136,7 +136,7 @@ public class PrzegladarkaBiblioteki extends AppCompatActivity {
             if (czyPrzeczytana == 1) {
                 przeczytana = " - Przeczytana";
             }
-            listaksiazek.add(data.getString(2) + " - " + data.getString(1) + " "+przeczytana); // dodaj do listy ksiazek format autor - tytul
+            listaksiazek.add(data.getString(2) + " - " + data.getString(1) + " " + przeczytana); // dodaj do listy ksiazek format autor - tytul
             // tworzyny mape -pozycja,ksiazka- pierwsza wartosc to pozycja w liscie ListView, a druga wartosc to id ksiazki
             // inaczej nie da sie pozyskac id ksiazki poniewaz elementy w liscie maja swoje numery
             mapaKsiazek.put(list_item, Integer.valueOf(data.getString(0)));
@@ -159,11 +159,11 @@ public class PrzegladarkaBiblioteki extends AppCompatActivity {
                 int id = mapaKsiazek.get(i) != null ? mapaKsiazek.get(i) : -1; // jak nie ma id naszej ksiazki w liscie zwracamy -1, nie odnaleziono
 
                 Log.i("LISTA KSIAZEK", nazwaBiblioteki + " Wcisnieto pozycje ksiazki :: id :: " + String.valueOf(id) + " w bibliotece :: id :: " + idBiblioteki);
-                if(id > -1){
+                if (id > -1) {
                     Intent podgladKsiazki = new Intent(PrzegladarkaBiblioteki.this, PodgladKsiazki.class);
-                    podgladKsiazki.putExtra("id",id);
-                    podgladKsiazki.putExtra("idBiblioteki",idBiblioteki);
-                    podgladKsiazki.putExtra("nazwa",nazwaBiblioteki);
+                    podgladKsiazki.putExtra("id", id);
+                    podgladKsiazki.putExtra("idBiblioteki", idBiblioteki);
+                    podgladKsiazki.putExtra("nazwa", nazwaBiblioteki);
                     startActivity(podgladKsiazki);
                 }
             }
@@ -195,7 +195,7 @@ public class PrzegladarkaBiblioteki extends AppCompatActivity {
             // usuwanie
             Bazadanych.usunBiblioteke(idBiblioteki);
 
-            startActivity(new Intent(PrzegladarkaBiblioteki.this,biblioteka.class));
+            startActivity(new Intent(PrzegladarkaBiblioteki.this, biblioteka.class));
 
         }
     }

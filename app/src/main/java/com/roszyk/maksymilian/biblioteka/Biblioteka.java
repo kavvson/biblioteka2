@@ -66,9 +66,6 @@ public class biblioteka extends AppCompatActivity {
             @Override
             public boolean onGroupClick(ExpandableListView parent, View v,
                                         int groupPosition, long id) {
-                // Toast.makeText(getApplicationContext(),
-                // "Group Clicked " + listDataHeader.get(groupPosition),
-                // Toast.LENGTH_SHORT).show();
                 return false;
             }
         });
@@ -142,13 +139,8 @@ public class biblioteka extends AppCompatActivity {
         nazwaBiblioteki = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
 
-
         Cursor data = Bazadanych.pobierzWszystkieBiblioteki();
-        ArrayList<String> listData = new ArrayList<>();
 
-
-
-       // boolean insertData = Bazadanych.addDataLibrary("test");
 
         while (data.moveToNext()) {
             nazwaBiblioteki.add(data.getString(1));

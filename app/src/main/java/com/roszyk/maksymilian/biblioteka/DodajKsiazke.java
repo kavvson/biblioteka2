@@ -1,7 +1,6 @@
 package com.roszyk.maksymilian.biblioteka;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +12,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.roszyk.maksymilian.biblioteka.Model.Ksiazka;
@@ -99,18 +97,7 @@ public class DodajKsiazke extends AppCompatActivity {
         });
 
         Bazadanych = new DBHandler(this);
-        //
-        //  buttonActivity4.setOnClickListener(new index.StartNewActivity4());
 
-        //Button buttonActivity5 = (Button)findViewById(R.id.dodajk);
-        // buttonActivity5.setOnClickListener(new index.StartNewActivity5());
-
-        // mListViewFilm = (ListView) findViewById(R.id.filmList);
-        //  mListViewBook = (ListView) findViewById(R.id.bookList);
-        //  mDatabaseHelper = new databasehelper(this);
-
-        //populateListViewFilm();
-        // populateListViewBook();
     }
 
 

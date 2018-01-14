@@ -271,6 +271,7 @@ public class DBHandler extends SQLiteOpenHelper {
     /**
      * pobierzWszystkieBiblioteki
      * Pobiera liste wszystkich bibliotek
+     *
      * @return
      */
     public Cursor pobierzWszystkieBiblioteki() {
@@ -349,6 +350,7 @@ public class DBHandler extends SQLiteOpenHelper {
     /**
      * usunBiblioteke
      * Usuwanie biblioteki i wszystkich powiazanych wpisow
+     *
      * @param id
      */
     public void usunBiblioteke(int id) {

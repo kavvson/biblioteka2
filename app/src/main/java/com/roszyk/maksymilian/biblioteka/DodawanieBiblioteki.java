@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.design.widget.TextInputLayout;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -16,12 +15,9 @@ import android.widget.Toast;
 public class DodawanieBiblioteki extends AppCompatActivity {
 
     private static final int MAX_NAZWA_LENGTH = 20;
-    private Toolbar toolbar;
     private EditText input_biblioteka_nazwa;
     private TextInputLayout layout_input_biblioteka_nazwa;
     private Button dodaj;
-    private int validation_errors = 0;
-    private static final String TAG = "DatabaseHelper";
 
     DBHandler Bazadancyh;
 
