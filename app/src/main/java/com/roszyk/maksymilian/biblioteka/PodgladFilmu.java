@@ -81,7 +81,11 @@ public class PodgladFilmu extends AppCompatActivity {
         czas.setText(String.valueOf(k.getDlugosc()));
         rok.setText(String.valueOf(k.getRok()));
         gatunek.setText(k.getGatunek());
-        opis.setText(String.valueOf(k.getOpis()));
+
+        // jak nie ma opisu to jest null, nie ma potrzeby wyswietlania
+        if(String.valueOf(k.getOpis()) != "null"){
+            opis.setText(String.valueOf(k.getOpis()));
+        }
 
 
         chceckboxZdarzenie();

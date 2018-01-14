@@ -77,8 +77,16 @@ public class PrzegladarkaBiblioteki extends AppCompatActivity {
         Cursor data = Bazadanych.getFilmsFromLibrary(idBiblioteki); // sql result - iterator
 
         int list_item = 0;
+
         while (data.moveToNext()) {
-            listafilmow.add(data.getString(2) + " - " + data.getString(1)); // dodaj do listy ksiazek format autor - tytul
+            int czyObejrzany = 0;
+            String obejrzany = "";
+            czyObejrzany = Integer.valueOf(data.getString(8)); // trzeba zmienic na integer
+            if (czyObejrzany == 1) {
+                obejrzany = " - Obejrzany";
+            }
+            listafilmow.add(data.getString(2) + " - " + data.getString(1) + " "+obejrzany); // dodaj do listy ksiazek format autor - tytul
+
             // tworzyny mape -pozycja,film- pierwsza wartosc to pozycja w liscie ListView, a druga wartosc to id filmu
             // inaczej nie da sie pozyskac id filmu poniewaz elementy w liscie maja swoje numery
             mapaFilmow.put(list_item, Integer.valueOf(data.getString(0)));
@@ -122,7 +130,13 @@ public class PrzegladarkaBiblioteki extends AppCompatActivity {
 
         int list_item = 0;
         while (data.moveToNext()) {
-            listaksiazek.add(data.getString(2) + " - " + data.getString(1)); // dodaj do listy ksiazek format autor - tytul
+            int czyPrzeczytana = 0;
+            String przeczytana = "";
+            czyPrzeczytana = Integer.valueOf(data.getString(8)); // trzeba zmienic na integer
+            if (czyPrzeczytana == 1) {
+                przeczytana = " - Przeczytana";
+            }
+            listaksiazek.add(data.getString(2) + " - " + data.getString(1) + " "+przeczytana); // dodaj do listy ksiazek format autor - tytul
             // tworzyny mape -pozycja,ksiazka- pierwsza wartosc to pozycja w liscie ListView, a druga wartosc to id ksiazki
             // inaczej nie da sie pozyskac id ksiazki poniewaz elementy w liscie maja swoje numery
             mapaKsiazek.put(list_item, Integer.valueOf(data.getString(0)));

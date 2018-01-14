@@ -79,7 +79,12 @@ public class PodgladKsiazki extends AppCompatActivity {
         strony.setText(String.valueOf(k.getStrony()));
         rok.setText(String.valueOf(k.getRok()));
         gatunek.setText(k.getGatunek());
-        opis.setText(String.valueOf(k.getOpis()));
+
+        // jak nie ma opisu to jest null, nie ma potrzeby wyswietlania
+        if(String.valueOf(k.getOpis()) != "null"){
+            opis.setText(String.valueOf(k.getOpis()));
+        }
+
 
 
         // Ustaw zaznaczenie z bazy
