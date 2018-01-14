@@ -24,6 +24,7 @@ public class DodawanieBiblioteki extends AppCompatActivity {
     private static final String TAG = "DatabaseHelper";
 
     DBHandler Bazadancyh;
+
     /*
         Tworzenie widoku
      */
@@ -32,10 +33,10 @@ public class DodawanieBiblioteki extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dodawanie_biblioteki);
 
-     /**
-          Opracowane na podstawie
-          https://www.androidhive.info/2015/09/android-material-design-floating-labels-for-edittext/
-     */
+        /**
+         Opracowane na podstawie
+         https://www.androidhive.info/2015/09/android-material-design-floating-labels-for-edittext/
+         */
 
         layout_input_biblioteka_nazwa = (TextInputLayout) findViewById(R.id.layout_input_biblioteka_nazwa);
         input_biblioteka_nazwa = (EditText) findViewById(R.id.input_biblioteka_nazwa);
@@ -56,7 +57,7 @@ public class DodawanieBiblioteki extends AppCompatActivity {
      * Walidacja
      * Podpowiedź :: android:hint="@string/bi_label_dodaj_biblioteke"
      * Komunikat błędu @string/blad_pole_puste_nazwaBiblioteki
-     *
+     * <p>
      * W przypadku błedu zatrzymaj się
      * ! dodaj rekord i przenies do listy
      */
@@ -92,7 +93,7 @@ public class DodawanieBiblioteki extends AppCompatActivity {
             requestFocus(input_biblioteka_nazwa);
             return false;
         }
-      layout_input_biblioteka_nazwa.setErrorEnabled(false);
+        layout_input_biblioteka_nazwa.setErrorEnabled(false);
 
 
         return true;
@@ -102,14 +103,14 @@ public class DodawanieBiblioteki extends AppCompatActivity {
         boolean insertData = Bazadancyh.addDataLibrary(newEntry);
 
         if (insertData) {
-            Toast.makeText(getApplicationContext(),"Dodano", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Dodano", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(getApplicationContext(),"Blad", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Blad", Toast.LENGTH_SHORT).show();
         }
     }
 
     /**
-      Ustaw focus na pole z błędem
+     * Ustaw focus na pole z błędem
      */
     private void requestFocus(View view) {
         if (view.requestFocus()) {
@@ -118,7 +119,7 @@ public class DodawanieBiblioteki extends AppCompatActivity {
     }
 
     /**
-        Obsługa nasłuchiwania w walidacji
+     * Obsługa nasłuchiwania w walidacji
      */
     private class MyTextWatcher implements TextWatcher {
 

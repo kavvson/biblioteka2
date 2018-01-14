@@ -100,7 +100,6 @@ public class Ksiazka {
     }
 
 
-
     @Override
     public String toString() {
         return "Book [id=" + id + ", title=" + tytul + ", author=" + autor
