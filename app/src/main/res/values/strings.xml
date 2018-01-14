@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Biblioteka</string>
+
+
+    <string name="ma_header_text">Witaj w bibliotece!</string>
+    <string name="ma_button_text">Przejdź do biblioteki</string>
+
+    <string name="bi_header">Kreator dodawania biblioteki</string>
+    <string name="bi_button">Dodaj</string>
+    <string name="bi_label_dodaj_biblioteke">Nazwa</string>
+
+    <string name="bb_header">Przegląd biblioteki</string>
+    <string name="dk_header">Dodawanie książki</string>
+    <string name="pk_header">Podgląd książki</string>
+    <string name="pf_header">Podgląd filmu</string>
+    <string name="df_header">Dodawanie filmu</string>
+
+
+    <string name="ki_label_dodaj_autora">Autor</string>
+    <string name="ki_label_dodaj_tytul">Tytuł</string>
+    <string name="ki_label_dodaj_strony">Ilość stron</string>
+    <string name="ki_label_dodaj_datawydania">Rok wydatania</string>
+    <string name="ki_label_dodaj_gatunek">Gatunek</string>
+    <string name="ki_label_dodaj_opis">Opis</string>
+    <string name="ki_label_checkbox">Czy przeczytana?</string>
+
+
+    <string name="fi_label_dodaj_tytul">Tytuł</string>
+    <string name="fi_label_dodaj_rezyser">Reżyser</string>
+    <string name="fi_label_dodaj_czas">Czas trwania ( min )</string>
+    <string name="fi_label_dodaj_rok">Rok produkcji</string>
+    <string name="fi_label_dodaj_gatunek">Gatunek</string>
+    <string name="fi_label_dodaj_opis">Opis</string>
+    <string name="fi_label_checkbox">Czy obejrzany?</string>
+
+
+
+    <string name="lp_dodaj">Witaj w bibliotece!</string>
+    <string name="landing_header">Lista bibliotek</string>
+    <string name="lp_dodaj_btn">Dodaj bibliotekę</string>
+    <string name="landing_page_header">Lista</string>
+
+    <string name="blad_pole_puste_nazwaBiblioteki">Proszę uzupełnić nazwę biblioteki</string>
+
+    <string name="blad_pole_puste_kautor">Proszę podać autora</string>
+    <string name="blad_pole_puste_ktytul">Proszę podać tytuł</string>
+    <string name="blad_pole_puste_kstrony">Proszę podać ilość stron</string>
+    <string name="blad_pole_puste_kRok">Proszę podać rok wydania</string>
+    <string name="blad_pole_puste_kGatunek">Proszę podać gatunek</string>
+
+
+    <string name="blad_pole_liczba_kstrony">Pole nie jest liczbą</string>
+    <string name="blad_pole_liczba_kRok">Pole nie jest liczbą</string>
+    <string name="blad_pole_przedzial_kRok">Rok powinien być w przedziale</string>
+
+
+    <string name="blad_dlugosc_nazwaBiblioteki">Nazwa może mieć maksymalnie</string>
+
+    <string name="blad_dlugosc">może mieć maksymalnie</string>
+    <string name="blad_dokladna_dlugosc">musi mieć dokładnie</string>
+
+
+
+</resources>
