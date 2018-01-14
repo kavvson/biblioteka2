@@ -24,7 +24,7 @@ import android.widget.Toast;
  * ExpandableListView opracowane na podstawie
  * https://www.androidhive.info/2013/07/android-expandable-list-view-tutorial/
  */
-public class Biblioteka extends AppCompatActivity {
+public class biblioteka extends AppCompatActivity {
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> nazwaBiblioteki;
@@ -130,7 +130,7 @@ public class Biblioteka extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(Biblioteka.this, DodawanieBiblioteki.class);
+            Intent intent = new Intent(biblioteka.this, DodawanieBiblioteki.class);
             startActivity(intent);
         }
     }

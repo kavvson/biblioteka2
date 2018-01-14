@@ -17,7 +17,7 @@ import com.roszyk.maksymilian.biblioteka.Model.Ksiazka;
 public class DBHandler extends SQLiteOpenHelper {
     private static final String TAG = "DatabaseHelper";
 
-    private static final String DB_NAME = "Biblioteka.db";
+    private static final String DB_NAME = "biblioteka.db";
     private static final String TABLE_NAME_LIBRARY = "people_table";
     private static final String TABLE_NAME_FILM = "film_table";
     private static final String TABLE_NAME_BOOK = "book_table";

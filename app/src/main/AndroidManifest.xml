@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:label="@string/landing_page_header" android:name=".Biblioteka"/>
+        <activity android:label="@string/landing_page_header" android:name=".biblioteka"/>
         <activity android:label="@string/bi_header" android:name=".DodawanieBiblioteki"/>
         <activity android:label="@string/bb_header" android:name=".PrzegladarkaBiblioteki"/>
         <activity android:label="@string/dk_header" android:name=".DodajKsiazke"/>

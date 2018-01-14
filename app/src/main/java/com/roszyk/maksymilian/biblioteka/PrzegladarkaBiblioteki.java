@@ -38,7 +38,7 @@ public class PrzegladarkaBiblioteki extends AppCompatActivity {
         Intent intent = getIntent();
         idBiblioteki = intent.getIntExtra("id", 0); // odbieramy parametr po wybraniu biblioteki
         nazwaBiblioteki = intent.getStringExtra("nazwa"); // odbieramy parametr po wybraniu biblioteki
-        setTitle("Biblioteka - " + nazwaBiblioteki); // zmiana tytulu toolbara
+        setTitle("biblioteka - " + nazwaBiblioteki); // zmiana tytulu toolbara
 
         setContentView(R.layout.przegladarka_biblioteki); // renderuj widok
 
@@ -181,7 +181,7 @@ public class PrzegladarkaBiblioteki extends AppCompatActivity {
             // usuwanie
             Bazadanych.usunBiblioteke(idBiblioteki);
 
-            startActivity(new Intent(PrzegladarkaBiblioteki.this,Biblioteka.class));
+            startActivity(new Intent(PrzegladarkaBiblioteki.this,biblioteka.class));
 
         }
     }

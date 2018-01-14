@@ -70,7 +70,7 @@ public class DodawanieBiblioteki extends AppCompatActivity {
 
         DodajRekord(input_biblioteka_nazwa.getText().toString()); // dodaj rekord
 
-        startActivity(new Intent(getApplicationContext(), Biblioteka.class)); // przenies do listy po dodaniu
+        startActivity(new Intent(getApplicationContext(), biblioteka.class)); // przenies do listy po dodaniu
     }
 
     /**
